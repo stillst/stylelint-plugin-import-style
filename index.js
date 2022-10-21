@@ -2,7 +2,7 @@
 
 const stylelint = require('stylelint');
 
-const pluginName = 'disallow-import-style';
+const pluginName = 'import-style';
 const ruleName = `plugin-${ pluginName }/${ pluginName }`;
 const messages = stylelint.utils.ruleMessages(ruleName, {
     rejectedFirstSymbol: 'Forbidden start symbols in import statements',
@@ -41,9 +41,10 @@ const ruleFunction = (enabled, options = {}) => (root, result) => {
         }
 
         const importPath = atRule.params.replace(/'|"/g, '');
+        const defaultForbiddenSymbol = '~';
 
         if ((!hasOptions || options.disallowStartSymbols)
-            && isStartSymbolsForbidden(importPath, options.disallowStartSymbols || '~')) {
+            && isStartSymbolsForbidden(importPath, options.disallowStartSymbols || defaultForbiddenSymbol)) {
 
             stylelint.utils.report({
                 ruleName,

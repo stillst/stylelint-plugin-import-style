@@ -13,9 +13,22 @@ As follows:
         "stylelint-plugin-import-style"
     ],
     "rules": {
-        "plugin-disallow-import-path/disallow-import-path": [true, {
+        "plugin-import-style/import-style": true,
+    }
+};
+```
+
+Or:
+
+```js
+{
+    "plugins": [
+        "stylelint-plugin-import-style"
+    ],
+    "rules": {
+        "plugin-import-style/import-style": [true, {
             disallowExtension: true,
-            disallowStartSymbols: '~',
+            disallowStartSymbols: '~'
         }]
     }
 };
