@@ -1,7 +1,7 @@
-const pluginName = 'disallow-import-style';
+const pluginName = 'import-style';
 const ruleName = `plugin-${ pluginName }/${ pluginName }`;
-const startSymbolWarning = 'Forbidden start symbols in import statements (plugin-disallow-import-style/disallow-import-style)';
-const fileExtensionWarning = 'Avoid file extensions in import statements (plugin-disallow-import-style/disallow-import-style)'
+const startSymbolWarning = 'Forbidden start symbols in import statements (plugin-import-style/import-style)';
+const fileExtensionWarning = 'Avoid file extensions in import statements (plugin-import-style/import-style)'
 
 module.exports = {
     [ruleName]: [
