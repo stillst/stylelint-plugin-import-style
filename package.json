@@ -1,6 +1,6 @@
 {
   "name": "stylelint-plugin-import-style",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom stylelint plugin to catch usage of `@import` statement files beginning with chosen characters or ends with filename extensions.",
   "main": "index.js",
   "scripts": {
